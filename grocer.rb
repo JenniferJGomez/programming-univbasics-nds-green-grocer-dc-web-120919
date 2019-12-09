@@ -43,7 +43,7 @@ def apply_coupons(cart, coupons)
     item_is_in_basket = !!item_with_coupon
     count_is_big_enough_to_apply = item_is_in_basket && item_with_coupon[:count] >= coupon[:num]
     if item_is_in_basket and count_is_big_enough_to_apply
-      consolidated_cart(item_with_coupon, coupon, cart)
+      consolidate_cart(item_with_coupon, coupon, cart)
     end
     i += 1
   end
